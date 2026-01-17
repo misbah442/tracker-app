@@ -33,7 +33,9 @@ class Uihelper {
     required VoidCallback callback,
     required String text,
   }) {
-    return TextButton(onPressed: () {}, child: Text(text));
+    return TextButton(onPressed: () {
+      callback();
+    }, child: Text(text));
   }
 
   static CutomTextFiled({
